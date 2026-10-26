@@ -42,6 +42,8 @@ window.BLOG_CONFIG = {
   postsPerPage: 6,
 
   navLinks: [
+    { label: "Writing Clips", href: "writing-clips.html" },
+    { label: "Photography", href: "photography.html" },
     { label: "Blog", href: "index.html" },
     { label: "About", href: "about.html" },
     { label: "Contact", href: "contact.html" },
@@ -50,6 +52,27 @@ window.BLOG_CONFIG = {
   /* Slugs listed here appear in the "Popular" view, in this order. */
   popularSlugs: [],
 };
+
+/* WRITING CLIPS: your writing published elsewhere (newspapers, magazines,
+   websites, interviews, reviews). Copy the example, remove the slash-star marks. */
+window.WRITING_CLIPS = [
+  /*
+  {
+    title: "Title of the article",
+    publication: "Name of the newspaper or website",
+    date: "2026-10-01",                 // year-month-day
+    url: "https://link-to-the-article",
+    summary: "One or two sentences about the piece.",
+  },
+  */
+];
+
+/* PHOTOGRAPHY: put your photos in the images folder, then list them here. */
+window.PHOTOS = [
+  /*
+  { src: "images/my-photo.jpg", caption: "A short caption" },
+  */
+];
 
 window.BLOG_POSTS = [
   /*

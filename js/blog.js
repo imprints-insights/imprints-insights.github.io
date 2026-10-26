@@ -215,6 +215,47 @@
     }
   }
 
+  /* Writing clips */
+  function renderClips() {
+    var box = byId("clips-root");
+    if (!box) return;
+    var list = (window.WRITING_CLIPS || []).slice().sort(function (a, c) {
+      return String(c.date).localeCompare(String(a.date));
+    });
+    if (!list.length) {
+      box.innerHTML = '<p class="empty-state">My published writing will be gathered here soon.</p>';
+      return;
+    }
+    box.innerHTML = '<ul class="clip-list">' + list.map(function (c) {
+      var title = c.url
+        ? '<a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.title) + "</a>"
+        : esc(c.title);
+      return '<li class="clip">' +
+        '<p class="card-kicker">' + esc(c.publication || "") + "</p>" +
+        '<h2 class="clip-title">' + title + "</h2>" +
+        (c.summary ? '<p class="clip-summary">' + esc(c.summary) + "</p>" : "") +
+        '<p class="post-meta">' + esc(formatDate(c.date)) +
+        (c.url ? ' &middot; <a href="' + esc(c.url) + '" target="_blank" rel="noopener">Read the piece &rarr;</a>' : "") +
+        "</p></li>";
+    }).join("") + "</ul>";
+  }
+
+  /* Photography */
+  function renderPhotos() {
+    var box = byId("photos-root");
+    if (!box) return;
+    var list = window.PHOTOS || [];
+    if (!list.length) {
+      box.innerHTML = '<p class="empty-state">Photographs are coming soon.</p>';
+      return;
+    }
+    box.innerHTML = '<ul class="photo-grid">' + list.map(function (p) {
+      return '<li class="photo"><a href="' + esc(p.src) + '" target="_blank" rel="noopener">' +
+        '<img src="' + esc(p.src) + '" alt="' + esc(p.caption || "") + '" loading="lazy" /></a>' +
+        (p.caption ? '<p class="photo-caption">' + esc(p.caption) + "</p>" : "") + "</li>";
+    }).join("") + "</ul>";
+  }
+
   renderChrome();
   if (page === "home") renderHome();
   else if (page === "post") {
@@ -222,4 +263,6 @@
     window.addEventListener("hashchange", renderPost);
   }
   else if (page === "contact") renderContact();
+  else if (page === "clips") renderClips();
+  else if (page === "photos") renderPhotos();
 })();

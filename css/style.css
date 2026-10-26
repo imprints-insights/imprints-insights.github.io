@@ -68,7 +68,7 @@ h1, h2, h3 { font-family: var(--serif-display); font-weight: 700; color: var(--b
 .site-brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .site-name { font-family: var(--serif-display); font-weight: 700; font-size: 31px; letter-spacing: 0.3px; color: var(--black); }
 .site-byline { font-family: var(--serif-display); font-style: italic; font-weight: 500; font-size: 17px; color: var(--brown); margin-top: 3px; }
-.site-nav { list-style: none; margin: 0; padding: 0; display: flex; gap: 28px; flex-wrap: wrap; }
+.site-nav { list-style: none; margin: 0; padding: 0; display: flex; gap: 6px 26px; flex-wrap: wrap; }
 .site-nav a {
   font-family: var(--serif-display); color: var(--black); text-decoration: none; font-weight: 700;
   font-size: 16px; letter-spacing: 2.2px; text-transform: uppercase; padding-bottom: 5px; border-bottom: 2px solid transparent;
@@ -125,6 +125,23 @@ main.page-main { max-width: 740px; margin: 0 auto; padding: 44px 20px 60px; }
 .article-body img { max-width: 100%; }
 .back-link { display: inline-block; margin-top: 26px; font-family: var(--serif-display); font-weight: 700; font-size: 16px; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; color: var(--brown); }
 .back-link:hover { color: var(--black); }
+
+/* Writing clips and photography */
+main.page-main.page-main--wide { max-width: var(--maxw); }
+.page-intro { margin: 0 0 16px; color: var(--muted); font-style: italic; max-width: 640px; }
+.clip-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.clip { padding: 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.clip:first-child { padding-top: 6px; }
+.clip-title { margin: 0; font-size: 30px; line-height: 1.2; }
+.clip-title a { color: var(--black); text-decoration: none; }
+.clip-title a:hover { color: var(--brown); }
+.clip-summary { margin: 0; }
+.clip .post-meta { margin: 0; padding: 0; }
+.photo-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; }
+.photo { margin: 0; }
+.photo a { display: block; border: 1px solid var(--line); background: var(--card); padding: 8px; }
+.photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.photo-caption { margin: 8px 2px 0; font-family: var(--serif-display); font-style: italic; font-size: 18px; color: var(--muted); }
 
 /* Related posts */
 .related { background: var(--cream-deep); border-top: 1px solid var(--line); }
