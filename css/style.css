@@ -13,6 +13,7 @@
   --card: #fffdf8;
   --radius: 4px;
   --maxw: 1080px;
+  --header-maxw: 1280px;
   --serif-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --serif-body: Lora, Georgia, "Times New Roman", serif;
 }
@@ -39,7 +40,7 @@ h1, h2, h3 { font-family: var(--serif-display); font-weight: 700; color: var(--b
 /* Top bar */
 .top-bar { background: var(--black); color: var(--beige); font-size: 14px; }
 .top-bar-inner {
-  max-width: var(--maxw); margin: 0 auto; padding: 8px 20px;
+  max-width: var(--header-maxw); margin: 0 auto; padding: 8px 20px;
   display: flex; justify-content: space-between; align-items: center; gap: 12px;
   font-family: var(--serif-body);
 }
@@ -59,7 +60,7 @@ h1, h2, h3 { font-family: var(--serif-display); font-weight: 700; color: var(--b
 /* Header */
 .site-header { background: var(--cream); border-bottom: 1px solid var(--line); }
 .site-header-inner {
-  max-width: var(--maxw); margin: 0 auto; padding: 14px 20px;
+  max-width: var(--header-maxw); margin: 0 auto; padding: 14px 20px;
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;
 }
 .site-brand-link { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--black); }
