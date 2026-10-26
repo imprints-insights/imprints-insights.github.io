@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Imprints &amp; Insights is a reflective writing platform by Dellar Zvinavashe Sibanda, exploring life, humanity, personal experiences and social observations." />
+  <meta name="theme-color" content="#14110e" />
+  <title>Imprints &amp; Insights | Dellar Zvinavashe Sibanda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="home">
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <p class="top-bar-phone" id="top-bar-phone-wrap"></p>
+      <a class="button-ghost" id="top-bar-cta" href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-brand">
+        <a class="site-brand-link" href="index.html">
+          <img class="site-brand-icon" src="images/icon.png" alt="" width="64" height="41" />
+          <span class="site-brand-text">
+            <span class="site-name">Imprints &amp; Insights</span>
+            <span class="site-byline">by <span data-site-name>Dellar Zvinavashe Sibanda</span></span>
+          </span>
+        </a>
+      </div>
+      <nav aria-label="Site"><ul id="site-nav" class="site-nav"></ul></nav>
+    </div>
+  </header>
+
+  <section class="blog-hero" aria-label="Welcome">
+    <div class="blog-hero-inner">
+      <h1 class="visually-hidden">Imprints &amp; Insights</h1>
+      <img class="hero-logo" src="images/logo.png" alt="Imprints &amp; Insights: a journal of life and humanity. Experiences lived. Truths uncovered. Lessons shared." width="1000" height="631" />
+      <p class="blog-hero-intro" data-hero-intro></p>
+      <p class="blog-hero-actions"><a class="button-primary" id="hero-cta" href="contact.html">Get in touch</a></p>
+    </div>
+  </section>
+
+  <div class="filter-bar" role="navigation" aria-label="Feed">
+    <span class="filter-intro">View:</span>
+    <ul class="filter-list" id="feed-switcher">
+      <li><a href="index.html?feed=newest&amp;page=1" data-feed="newest">Newest</a></li>
+      <li><a href="index.html?feed=popular&amp;page=1" data-feed="popular">Popular</a></li>
+    </ul>
+  </div>
+
+  <main class="blog-main">
+    <noscript><p class="empty-state">Please turn on JavaScript to see the posts.</p></noscript>
+    <ul id="blog-feed" class="post-grid" aria-live="polite"></ul>
+    <nav class="pagination" id="blog-pagination" aria-label="Blog pages"></nav>
+  </main>
+
+  <section class="footer-cta-strip" id="footer-cta-strip" hidden>
+    <p class="footer-cta-strip__text" data-footer-cta></p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner"><span data-footer-line></span></div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>
